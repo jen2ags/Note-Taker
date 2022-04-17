@@ -7,9 +7,9 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 
-//Middleware
+
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('./Develop/public'));
 app.use(express.urlencoded({extended: true}));
 
 
@@ -30,15 +30,20 @@ app.delete('/api/notes', (req, res) => {
 
 });
 
-//calls notes page html
+//HTML routes
 app.get('/notes', (req, res)  => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-//calls home page html
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 });
+
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
+});
+
 
 
 app.listen(3001, () => {
