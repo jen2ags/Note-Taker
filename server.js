@@ -8,19 +8,27 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 //Middleware
-app.usee(express.json());
+app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
 
 //Will GET notes that are saved.
 app.get('/api/notes', (req,res) => {
-    res.json(notes);
+    const results = notes;
+    console.log(req.query)
+    res.json(results);
 });
 
 //Will POST new notes to the json file
+app.post('/api/notes', (req, res) => {
+
+});
 
 //Will delete notes
+app.delete('/api/notes', (req, res) => {
+
+});
 
 //calls notes page html
 app.get('/notes', (req, res)  => {
