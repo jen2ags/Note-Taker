@@ -2,5 +2,23 @@
   "dependencies": {
     "express": "^4.17.3",
     "uuid": "^8.3.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "note-taker",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jen2ags/Note-Taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jen2ags/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/jen2ags/Note-Taker#readme"
 }
