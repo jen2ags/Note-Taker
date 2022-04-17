@@ -3,11 +3,33 @@ const fs = require('fs');
 const uuid = require('uuid');
 const notes = require('./Develop/db/db.json')
 const app = express();
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 
+//Middleware
+app.usee(express.json());
+app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}));
+
+
+//Will GET notes that are saved.
 app.get('/api/notes', (req,res) => {
-    res.send('It worked!');
+    res.json(notes);
+});
+
+//Will POST new notes to the json file
+
+//Will delete notes
+
+//calls notes page html
+app.get('/notes', (req, res)  => {
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
+});
+
+//calls home page html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 
