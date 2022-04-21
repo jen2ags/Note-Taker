@@ -45,7 +45,7 @@ app.get('*', (req,res) => {
 });
 
 
-
+//listen for the port to be open
 app.listen(3001, () => {
     console.log(`API server is now on PORT 3001!`)
 });
