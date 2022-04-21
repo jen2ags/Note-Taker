@@ -1,9 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const uuid = require('uuid');
-const notes = require('./Develop/db/db.json')
+const notes = require('./Develop/db/db.json');
 const app = express();
 const path = require('path');
+const { notes } = require('./Develop/db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
