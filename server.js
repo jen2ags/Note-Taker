@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: true}));
 
 //Will GET displayed notes that are saved.
 app.get('/api/notes', (req, res)  => {
-    res.sendFile(path.join(__dirname, '/db/db.json'));
+    res.sendFile(path.join(__dirname, './db/db.json'));
 });
 
 //Will POST new notes to the json file
