@@ -4,10 +4,10 @@ const uuid = require('uuid');
 const notes = require('./Develop/db/db.json');
 const app = express();
 const path = require('path');
-const { notes } = require('./Develop/db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
+app.use(express.static('public'));
 
 app.use(express.json());
 app.use(express.static('./Develop/public'));
@@ -15,10 +15,8 @@ app.use(express.urlencoded({extended: true}));
 
 
 //Will GET notes that are saved.
-app.get('/api/notes', (req,res) => {
-    const results = notes;
-    console.log(req.query)
-    res.json(results);
+app.get('/api/notes', (req, res)  => {
+    res.sendFile(path.join(__dirname, '/db/db.json'));
 });
 
 //Will POST new notes to the json file
@@ -31,14 +29,9 @@ app.delete('/api/notes', (req, res) => {
 
 });
 
-//HTML routes
-app.get('/notes', (req, res)  => {
-    res.sendFile(path.join(__dirname, '/public/notes.html'));
-});
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
+//HTML route
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
 });
 
 app.get('*', (req,res) => {
