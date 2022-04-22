@@ -8,20 +8,23 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static('public'));
-
 app.use(express.json());
-app.use(express.static('./Develop/public'));
 app.use(express.urlencoded({extended: true}));
 
 
-//Will GET notes that are saved.
+//Will GET displayed notes that are saved.
 app.get('/api/notes', (req, res)  => {
     res.sendFile(path.join(__dirname, '/db/db.json'));
 });
 
 //Will POST new notes to the json file
 app.post('/api/notes', (req, res) => {
+    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    const newNotes = req.body;
+    newNotes.id = uuid.v4();
+    notes.toString();
 
+    res.json(notes);
 });
 
 //Will delete notes
