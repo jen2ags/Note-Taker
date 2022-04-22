@@ -16,10 +16,7 @@ app.get('/api/notes', (req, res)  => {
     res.sendFile(path.join(__dirname, '.Develop/db/db.json'));
 });
 
-createNotes (body, noteArr) => {
-    const newNotes = body;
-    
-}
+
 
 //Will POST new notes to the json file
 app.post('/api/notes', (req, res) => {
