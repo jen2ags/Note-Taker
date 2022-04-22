@@ -1,7 +1,7 @@
 # Note Taker 
 
 ## Purpose
-The purpose of creating the Note Taker is to be able to create and save notes into our note taker and then be able to edit the current notes that we have or when they are completed, delete them. 
+The purpose of creating the Note Taker is to be able to create and save notes into our note taker. When you click on an existing note, the note will show up in the larger space. Then, when you are ready to delete the note, you can do so by clicking the trashcan icon.
 
 ## Built With
 * HTML
