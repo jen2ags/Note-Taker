@@ -14,26 +14,26 @@ app.use(express.urlencoded({extended: true}));
 
 //Will GET displayed notes that are saved.
 app.get('/api/notes', (req, res)  => {
-    res.sendFile(path.join(__dirname, './db/db.json'));
+    res.sendFile(path.join(__dirname, '.Develop/db/db.json'));
 });
 
 //Will POST new notes to the json file
 app.post('/api/notes', (req, res) => {
-    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    const notes = JSON.parse(fs.readFileSync('./Develop/db/db.json'));
     const newNotes = req.body;
     newNotes.id = uuid.v4();
     notes.push(newNotes);
-    fs.writeFileSync('./db/db.json', JSON.stringify(notes));
+    fs.writeFileSync('./Develop/db/db.json', JSON.stringify(notes));
 
     res.json(notes);
 });
 
 //Will delete notes
 app.delete('/api/notes', (req, res) => {
-    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    const notes = JSON.parse(fs.readFileSync('./Develop/db/db.json'));
     const deleteNote = notes.filter((removeNote) => 
     removeNote.id !== req.params.id);
-    fs.writeFileSync('./db/db.json', JSON.stringify(deleteNote));
+    fs.writeFileSync('./Develop/db/db.json', JSON.stringify(deleteNote));
     res.json(deleteNote);
 
 });
