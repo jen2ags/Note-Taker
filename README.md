@@ -11,12 +11,16 @@ The purpose of creating the Note Taker is to be able to create and save notes in
 * UUID
 * heroku
 
+## Github
+https://github.com/jen2ags/Note-Taker
+
 ## Website
-https://jen2ags.github.io/Karaoke-Kings/
+https://afternoon-tor-27473.herokuapp.com/notes
 
 ## Screen Shot
-![Screenshot Karaoke Kings](https://github.com/jen2ags/Karaoke-Kings/blob/develop/assets/images/karaoke%20kings%20screenshot%20final.png)
+![Screenshot Note Taker Main](https://github.com/jen2ags/Note-Taker/blob/main/images/Note%20Taker%20main%20page.png)
+![Screenshot Note Taker notes page](https://github.com/jen2ags/Note-Taker/blob/main/images/Note%20Taker%20page.png)
 
 
 ## Contribution
-Made by Jennifer Jennings, Mason Urrabas & Cheryl Cruz
+Made by Jennifer Jennings
