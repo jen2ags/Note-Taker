@@ -19,7 +19,7 @@ https://afternoon-tor-27473.herokuapp.com/notes
 
 ## Screen Shot
 ![Screenshot Note Taker Main](https://github.com/jen2ags/Note-Taker/blob/main/images/Note%20Taker%20main%20page.png)
-![Screenshot Note Taker notes page](https://github.com/jen2ags/Note-Taker/blob/main/images/Note%20Taker%20page.png)
+![Screenshot Note Taker notes page](https://github.com/jen2ags/Note-Taker/blob/main/images/Note%20Taker%20notes%20page.png)
 
 
 ## Contribution
