@@ -2,9 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const uuid = require('uuid');
 const notes = require('./Develop/db/db.json');
-const app = express();
 const path = require('path');
-
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static('./Develop/public'));
@@ -16,6 +15,11 @@ app.use(express.urlencoded({extended: true}));
 app.get('/api/notes', (req, res)  => {
     res.sendFile(path.join(__dirname, '.Develop/db/db.json'));
 });
+
+createNotes (body, noteArr) => {
+    const newNotes = body;
+    
+}
 
 //Will POST new notes to the json file
 app.post('/api/notes', (req, res) => {
