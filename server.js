@@ -30,6 +30,11 @@ app.post('/api/notes', (req, res) => {
 
 //Will delete notes
 app.delete('/api/notes', (req, res) => {
+    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    const deleteNote = notes.filter((removeNote) => 
+    removeNote.id !== req.params.id);
+    fs.writeFileSync('./db/db.json', JSON.stringify(deleteNote));
+    res.json(deleteNote);
 
 });
 
